@@ -31,17 +31,19 @@ function App() {
     const eurosValor = parseFloat(eurRef.current.value);
     const dolares = eurosValor * valor
 
-    resultRef.current.innerHTML = dolares.toFixed(2)+"$";
+    resultRef.current.innerHTML = dolares.toFixed(2) + "$";
 
   }
 
   return (
     <>
+      <div className="conversor">
+        <h1>Euro Dollar Conversor</h1>
+        <input className='center-elements' type="number" placeholder='EUR amount' ref={eurRef} />
+        <button className='center-elements' onClick={buttonClicked}>Convert EUR/USD</button>
+        <h2 ref={resultRef}></h2>
+      </div>
 
-      <h1>Euro Dollar Conversor</h1>
-      <input className='center-elements' type="number" placeholder='EUR amount' ref={eurRef} />
-      <button className='center-elements'onClick={buttonClicked}>Convert EUR/USD</button>
-      <h2 ref={resultRef}></h2>
 
     </>
   )
