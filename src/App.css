@@ -1,0 +1,7 @@
+h1,h2{
+    text-align: center;
+}
+.center-elements{
+    display: flex;
+    margin: 12px auto;
+}
